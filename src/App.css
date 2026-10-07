@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #090909;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, #2a0000 0%, transparent 35%),
+    #090909;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 75px;
+  padding: 0 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid #252525;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  background: #e50914;
+  padding: 8px 18px;
+
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  transform: skew(-8deg);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e50914;
+}
+
+.nav-links button,
+.hero-button {
+  border: none;
+  background: #e50914;
+  color: white;
+
+  padding: 12px 22px;
+
+  font-weight: 800;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.nav-links button:hover,
+.hero-button:hover {
+  background: #ff2029;
+  transform: translateY(-2px);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 600px;
+  padding: 80px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(90deg, #090909 35%, rgba(9, 9, 9, 0.55)),
+    radial-gradient(circle at 80% 50%, #9d0000, transparent 35%);
+}
+
+.hero-content {
+  max-width: 650px;
+  z-index: 2;
+}
+
+.subtitle {
+  color: #e50914;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(80px, 13vw, 170px);
+  line-height: 0.8;
+  letter-spacing: 3px;
+}
+
+.hero h1 span {
+  display: block;
+  color: #e50914;
+}
+
+.description {
+  color: #aaa;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 35px 0;
+}
+
+.hero-button {
+  padding: 15px 30px;
+  letter-spacing: 1px;
+}
+
+.hero-symbol {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 500px;
+  color: rgba(255, 255, 255, 0.035);
+  line-height: 1;
+  user-select: none;
+}
+
+/* HEROES */
+
+.heroes {
+  padding: 100px 7%;
+  background: #101010;
+}
+
+.section-heading {
+  margin-bottom: 45px;
+}
+
+.section-heading p {
+  color: #e50914;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.section-heading h2 {
+  margin-top: 5px;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.hero-card {
+  background: #181818;
+  border: 1px solid #292929;
+
+  transition: 0.3s;
+
+  overflow: hidden;
+}
+
+.hero-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--hero-color);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+  height: 230px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 100px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--hero-color),
+      #111 70%
+    );
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 34px;
+  letter-spacing: 1px;
+}
+
+.card-content p {
+  color: #888;
+  font-size: 13px;
+  margin: 5px 0 25px;
+}
+
+.details-button {
+  background: transparent;
+  color: white;
+
+  border: none;
+  border-bottom: 2px solid var(--hero-color);
+
+  padding-bottom: 5px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 7%;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #666;
+  font-size: 12px;
+
+  border-top: 1px solid #222;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-symbol {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links a {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 5%;
+    min-height: 550px;
+  }
+
+  .heroes {
+    padding: 70px 5%;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 90px;
+  }
+
+  footer {
+    padding: 25px 5%;
+  }
+}
